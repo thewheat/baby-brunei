@@ -139,11 +139,11 @@
 </head>
 <body>
 	<div class="container">
-		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1rXKNI0xrMCggaaLeb8zw1XltS34" width="640" height="480"></iframe>
-		<footer><a href="#" class="contact toggle-sidebar">About / Feedback / Contact me</a>
+		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1rXKNI0xrMCggaaLeb8zw1XltS34" width="100%" height="80%"></iframe>
+		<footer><a href="#" onclick="toggleSidebar(); return false;" class="contact toggle-sidebar">About / Feedback / Contact me</a>
 		</footer>
 		<div id="sidebar">
-			<a href="#" class="toggle-sidebar close float">[x]</a>
+			<a href="#" onclick="toggleSidebar(); return false;" class="toggle-sidebar close float">[x]</a>
 			<h4>About Baby Brunei</h4>
 			<img class="banner" src="ico/apple-touch-icon-120x120.png" alt="Baby Brunei logo"/>
 			<p>Focusing on locating breastfeeding/nursing &amp; diaper changing rooms in Brunei</p>
@@ -161,21 +161,15 @@
 				<li><a href="https://openclipart.org/">Openclipart</a> for SVG baby icon</li>
 				<li><a href="http://www.favicomatic.com/">Favic-o-matic</a> for icon generation for different platforms</li>
 			</ul>
-			<a href="#" class="toggle-sidebar close button">Dismiss [x]</a>
+			<a href="#" onclick="toggleSidebar(); return false;" class="toggle-sidebar close button">Dismiss [x]</a>
 		</div>			
 		</div>
 	</div>
 
 	<script>
-	function toggleSidebar(e){
-		e.preventDefault();
+	function toggleSidebar(){
 		document.querySelector(".container").classList.toggle("show-sidebar");
 	}
-	document.querySelectorAll(".toggle-sidebar").forEach(function(item){
-		item.addEventListener("click", toggleSidebar);
-	});
-
-	document.querySelector("iframe").style.width = "100%"; document.querySelector("iframe").style.height = "80%";
 	</script>
 </body>
 </html>
